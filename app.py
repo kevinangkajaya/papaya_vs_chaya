@@ -11,27 +11,30 @@ import gradio as gr
 exampleImagesList = ['images/chaya/chaya leaf.jpg','images/chaya/chaya plants.jpg',
                      'images/papaya/papaya fruit.jpg','images/papaya/papaya leaf.jpg','images/papaya/papaya plant and fruit.jpg']
 
-# %% gradio.ipynb 6
-# needed for Hugging Face platform
+# %% gradio.ipynb 5
+# Linux part: needed for Hugging Face platform
+# Windows part: needed for Windows
+# NotImplementedError: cannot instantiate 'PosixPath' (or 'WindowsPath) on your system
 import pathlib
 plt = platform.system()
-if plt == 'Windows': pathlib.WindowsPath = pathlib.PosixPath
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+elif plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 
-# %% gradio.ipynb 7
+# %% gradio.ipynb 6
 print("posix path:", pathlib.PosixPath)
 print("windows path:", pathlib.WindowsPath)
 print("plt:", plt)
 
-# %% gradio.ipynb 8
+# %% gradio.ipynb 7
 learn = load_learner('training_export/export.pkl')
 
-# %% gradio.ipynb 10
+# %% gradio.ipynb 9
 categories = ('Chaya plant', 'Papaya fruit', 'Papaya plant')
 def classify_image(img):
     pred,idx,probs = learn.predict(img)
     return dict(zip(categories, map(float, probs)))
 
-# %% gradio.ipynb 12
+# %% gradio.ipynb 11
 image = gr.components.Image(width=192,height=192)
 label = gr.components.Label()
 
