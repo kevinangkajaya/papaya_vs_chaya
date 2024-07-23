@@ -11,22 +11,22 @@ import gradio as gr
 exampleImagesList = ['images/chaya/chaya leaf.jpg','images/chaya/chaya plants.jpg',
                      'images/papaya/papaya fruit.jpg','images/papaya/papaya leaf.jpg','images/papaya/papaya plant and fruit.jpg']
 
-# %% gradio.ipynb 5
+# %% gradio.ipynb 6
 # needed for Hugging Face platform
 import pathlib
 plt = platform.system()
-if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
-
-# %% gradio.ipynb 6
-learn = load_learner('training_export/export.pkl')
+if plt == 'Windows': pathlib.WindowsPath = pathlib.PosixPath
 
 # %% gradio.ipynb 8
+learn = load_learner('training_export/export.pkl')
+
+# %% gradio.ipynb 10
 categories = ('Chaya plant', 'Papaya fruit', 'Papaya plant')
 def classify_image(img):
     pred,idx,probs = learn.predict(img)
     return dict(zip(categories, map(float, probs)))
 
-# %% gradio.ipynb 10
+# %% gradio.ipynb 12
 image = gr.components.Image(width=192,height=192)
 label = gr.components.Label()
 
