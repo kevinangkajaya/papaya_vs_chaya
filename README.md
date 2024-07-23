@@ -1,3 +1,17 @@
+---
+title: Papaya Vs Chaya
+emoji: 📉
+colorFrom: purple
+colorTo: gray
+sdk: gradio
+sdk_version: 4.39.0
+app_file: app.py
+pinned: false
+license: apache-2.0
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
 ### Papaya vs Chaya Plants
 - Upload your image and check if it is papaya plants or chaya plants!
 - Both plants look very similar at first glance.
@@ -33,16 +47,3 @@
     - Note that for this project, because we have two remote URLs (github and hugging face), in total we need to enter credentials 6-8 times.
     - We can add `git config lfs.cachecredentials true` to cause Git LFS to cache credentials for the lifetime of an operation, so we only need to enter the credential once. However, the credential will still be prompted every time we do a `push`.
 
----
-title: Papaya Vs Chaya
-emoji: 📉
-colorFrom: purple
-colorTo: gray
-sdk: gradio
-sdk_version: 4.39.0
-app_file: app.py
-pinned: false
-license: apache-2.0
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
