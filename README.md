@@ -45,5 +45,5 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
     - We can check more details here https://github.com/git-lfs/git-lfs/issues/3318. Here is the quote from the page: 
     > During the normal lifetime of a request such as a push, git-lfs will generally need to get credentials a few times - once to actually push content to the remote, as well as some additional API requests to do LFS-specific operations. As such, it's normal for git-lfs to need credentials three times as you're seeing here.
     - Note that for this project, because we have two remote URLs (github and hugging face), in total we need to enter credentials 6-8 times.
-    - We can add `git config lfs.cachecredentials true` to cause Git LFS to cache credentials for the lifetime of an operation, so we only need to enter the credential once. However, the credential will still be prompted every time we do a `push`.
+    - We can add `git config lfs.cachecredentials true` or `git config --global credential.helper cache` to cause Git LFS to cache credentials for the lifetime of an operation, so we only need to enter the credential once. However, the credential will still be prompted every time we do a `push`.
 
