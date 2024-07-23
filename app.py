@@ -17,6 +17,11 @@ import pathlib
 plt = platform.system()
 if plt == 'Windows': pathlib.WindowsPath = pathlib.PosixPath
 
+# %% gradio.ipynb 7
+print("posix path:", pathlib.PosixPath)
+print("windows path:", pathlib.WindowsPath)
+print("plt:", plt)
+
 # %% gradio.ipynb 8
 learn = load_learner('training_export/export.pkl')
 
