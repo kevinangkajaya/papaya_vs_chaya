@@ -47,3 +47,24 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
     - Note that for this project, because we have two remote URLs (github and hugging face), in total we need to enter credentials 6-8 times.
     - We can add `git config lfs.cachecredentials true` or `git config --global credential.helper cache` to cause Git LFS to cache credentials for the lifetime of an operation, so we only need to enter the credential once. However, the credential will still be prompted every time we do a `push`.
 
+### How to Copy to Another Project (This Project As a Template)
+- Go to https://huggingface.co/, login into your account.
+- Select `+New` -> `Space`.
+- On the `Create a New Space`:
+    - Choose a suitable Space name.
+    - Choose `apache-2.0` license.
+    - `Select the Space SDK`: `Gradio` -> `Blank`.
+    - Let `Space hardware` be default.
+    - Choose `Public` visibility.
+    - Click `Create Space`.
+- Clone the new repository to your working local PC by either HTTPS or SSH.
+- Make sure you already have this repository access on your working local PC or from Hugging Face user interface.
+- On your working local PC, copy the following from this repository to the new repository:
+    - .gitignore
+    - requirements.txt
+    - dev.ipynb
+    - gradio.ipynb
+- Adjust dev.ipynb as necessary. This dev.ipynb is used for setting up images folder, training the model by the image data, and make sure everything worked perfectly.
+- Adjust gradio.ipynb as necessary. This gradio.ipynb is used for configuring settings for Hugging Face (with Gradio) interface. This uses file data of `training_export/export.pkl` to set up the model.
+- Copy the content of README.md from this repository to the new repository. DO NOT delete existing section on the new repository, instead, skip copying that section (the part with `title`, `emoji`, `colorfrom`). Copy other sections, and edit as necessary.
+- Now you can save and commit your changes to Hugging Face's remote git.
