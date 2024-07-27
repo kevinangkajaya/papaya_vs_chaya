@@ -28,6 +28,10 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
     - ![Chaya plants](./images/chaya/chaya%20plants.jpg)
 - Note that this project is very simple, it cannot accurately judge pictures that are not papaya or chaya. Open the website: https://kevinangkajaya.github.io/papaya_vs_chaya
 
+### Jupyter Notebook
+- You need to have jupyter notebook to open this ipynb files.
+- To start the notebook, run `jupyter notebook` or `python -m jupyter notebook` on root folder's terminal.
+
 ### Git Miscellaneous
 - This project has two remote URLs:
     - github: git@github.com:kevinangkajaya/papaya_vs_chaya.git
