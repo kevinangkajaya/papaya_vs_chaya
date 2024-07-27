@@ -18,14 +18,14 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 - [NOT WORKING] Go here to check the Jupyter notebook: https://mybinder.org/v2/gh/kevinangkajaya/papaya_vs_chaya/main?urlpath=%2Fvoila%2Frender%2Fprod.ipynb
 - According to Wikipedia, The papaya (/pəˈpaɪə/, US: /pəˈpɑːjə/), papaw, (/pəˈpɔː/) or pawpaw (/ˈpɔːpɔː/) is the plant species Carica papaya, one of the 21 accepted species in the genus Carica of the family Caricaceae, and also the name of its fruit.
     - It was first domesticated in Mesoamerica, within modern-day southern Mexico and Central America. It is grown in several countries in regions with a tropical climate. In 2022, India produced 38% of the world's supply of papayas.
-    - ![Papaya plant and fruit](/images/papaya/papaya%20plant%20and%20fruit.jpg)
-    - ![Papaya leaf](/images/papaya/papaya%20leaf.jpg)
-    - ![Papaya fruit](/images/papaya/papaya%20fruit.jpg)
+    - ![Papaya plant and fruit](./images/papaya/papaya%20plant%20and%20fruit.jpg)
+    - ![Papaya leaf](./images/papaya/papaya%20leaf.jpg)
+    - ![Papaya fruit](./images/papaya/papaya%20fruit.jpg)
 - According to Wikipedia, Cnidoscolus aconitifolius, commonly known as chaya, tree spinach, or spinach tree, is a large, fast-growing and leafy perennial shrub that is believed to have originated in the Yucatán Peninsula of southeastern México.
     - As with most euphorbias, the entire plant contains a caustic, viscous and potentially dangerous white sap which flows readily when any part of the plant is broken, cut or damaged. 
     - The leaves should always be cooked before being eaten, as the raw leaves contain a high amount of toxic hydrocyanic acid, in addition to the irritating sap typical of Euphorbiaceae family members. Care should be taken to avoid getting any raw plant material into one’s mucous membranes; i.e., the sap, juice and hydrocyanic acids should, ideally, never contact one’s mouth, eyes, genitals, nose, inner ears or any otherwise open wound or injury.
-    - ![Chaya leaf](/images/chaya/chaya%20leaf.jpg)
-    - ![Chaya plants](/images/chaya/chaya%20plants.jpg)
+    - ![Chaya leaf](./images/chaya/chaya%20leaf.jpg)
+    - ![Chaya plants](./images/chaya/chaya%20plants.jpg)
 - Note that this project is very simple, it cannot accurately judge pictures that are not papaya or chaya. Open the website: https://kevinangkajaya.github.io/papaya_vs_chaya
 
 ### Git Miscellaneous
