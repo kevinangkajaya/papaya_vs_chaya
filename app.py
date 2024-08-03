@@ -27,7 +27,7 @@ getExampleImagesList("./images" )
 # %% gradio.ipynb 5
 # Linux part: needed for Hugging Face platform
 # Windows part: needed for Windows
-# NotImplementedError: cannot instantiate 'PosixPath' (or 'WindowsPath) on your system
+# without this, it can result in NotImplementedError: cannot instantiate 'PosixPath' (or 'WindowsPath) on your system
 import pathlib
 plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
@@ -42,12 +42,12 @@ print("plt:", plt)
 learn = load_learner('training_export/export.pkl')
 
 # %% gradio.ipynb 9
-categories = ('Chaya plant', 'Papaya fruit', 'Papaya plant')
+categories = learn.dls.vocab
 def classify_image(img):
     pred,idx,probs = learn.predict(img)
     return dict(zip(categories, map(float, probs)))
 
-# %% gradio.ipynb 11
+# %% gradio.ipynb 12
 image = gr.components.Image(width=192,height=192)
 label = gr.components.Label()
 
